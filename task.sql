@@ -1,9 +1,12 @@
 create procedure syn.usp_ImportFileCustomerSeasonal
 	@Record_ID int
---1. Нарушен регистр as
+--1) Нарушен регистр as
 AS 
 set nocount on
 begin
+	/*2) Повторное использование declare
+	  3) Использование запятой после объявления первой переменной
+	  4) При объявлении типа varchar не рекомендуется использовать max */
 	declare @RowCount int = (select count(*) from syn.SA_CustomerSeasonal)
 	declare @ErrorMessage varchar(max)
 

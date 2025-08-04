@@ -9,7 +9,8 @@ begin
 	  4) При объявлении типа varchar не рекомендуется использовать max */
 	declare @RowCount int = (select count(*) from syn.SA_CustomerSeasonal)
 	declare @ErrorMessage varchar(max)
-
+	
+--5) Неправильный отступ, нужен дополнительный tab после if
 -- Проверка на корректность загрузки
 	if not exists (
 	select 1

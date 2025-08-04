@@ -1,6 +1,7 @@
 create procedure syn.usp_ImportFileCustomerSeasonal
 	@Record_ID int
-AS
+--1. Нарушен регистр as
+AS 
 set nocount on
 begin
 	declare @RowCount int = (select count(*) from syn.SA_CustomerSeasonal)
